@@ -2,9 +2,10 @@ package com.supralog.user.dto;
 
 
 import java.sql.Date;
-
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import lombok.Data;
 
@@ -15,13 +16,25 @@ import lombok.Data;
  *
  */
 @Data
+@Entity
+@Table(name = "User")
 public class User {
-	@Id @GeneratedValue Long id;
-	@NotNull String pseudo;
+	@GeneratedValue Long id;
+	@Id @NotNull String pseudo;
 	@NotNull String pwd;
 	@NotNull String email;
-	@NotNull Date dateOfBirth;
+	@NotNull Date birthday;
 	String name;
-	String lastName;
+	String last;
 	String address;
+	@NotNull String country;
+	String gender;
+	
+	
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", pseudo=" + pseudo + ", pwd=" + pwd + ", email=" + email + ", birthday=" + birthday
+				+ ", name=" + name + ", last=" + last + ", address=" + address + ", country=" + country + ", gender="
+				+ gender + "]";
+	}
 }
