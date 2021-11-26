@@ -13,7 +13,15 @@ import com.supralog.user.commons.UserNotFoundException;
 import com.supralog.user.dto.User;
 import com.supralog.user.interfaces.UserRepository;
 
-
+/**
+ * <b>Service Rest for request GET on database</b>
+ * <p>
+ * Only showUser is implemented at this time.
+ * Dispatch exception if user's informations, otherwise dispatch custom error UserNotFoundException
+ * 
+ * @author Check
+ *
+ */
 @RestController
 public class DisplayUser {
 	@Autowired
@@ -25,7 +33,14 @@ public class DisplayUser {
 	DisplayUser(UserRepository repository) {
 		this.repository = repository;
 	}
-
+	/**
+	 *  
+	 *  Mapping = /user/{pseudo}
+	 *  PathVariable pseudo mandatory
+	 * 
+	 * @param pseudo request User send by pathvariable
+	 * @return User found or UserNotFoundException
+	 */
 	@GetMapping("/user/{pseudo}")
 	@ResponseBody
 	public User showUser(@PathVariable String pseudo) {
@@ -43,9 +58,5 @@ public class DisplayUser {
 		logger.info("Result of request : {}",requestUser.toString());
 		return requestUser;
 
-	}
-	@GetMapping("/")
-	public String hello() {
-		return "service is up and running";    
 	}
 }

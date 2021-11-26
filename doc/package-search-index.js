@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"com.supralog.user.commons"},{"l":"com.supralog.user.controller"},{"l":"com.supralog.user.dto"},{"l":"com.supralog.user.interfaces"},{"l":"com.supralog.user.userTest"}]

@@ -1,1 +1,1 @@
-INSERT INTO user (id, address,country,birthday,email,name,last,pseudo,pwd,gender) values (1,'1 rue de Paris 75000 Paris','France',TO_DATE('10/03/1987', 'DD/MM/YYYY'),'test@test.com','Blanc','Juste','user1','pwduser','M');
+INSERT INTO user (id, address,country,age,email,name,last,pseudo,pwd,gender) values (1,'1 rue de Paris 75000 Paris','France',18,'test@test.com','Blanc','Juste','user1','pwduser','M');
