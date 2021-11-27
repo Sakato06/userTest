@@ -1,13 +1,16 @@
-package com.supralog.user.userTest;
+package com.supralog.user;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.ActiveProfiles;
 
 @SpringBootTest
+@ActiveProfiles("test")
 class UserTestApplicationTests {
 
 	@Test
-	void contextLoads() {
+	void contextLoads(){
+	
 	}
 
 }

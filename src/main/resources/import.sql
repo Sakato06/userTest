@@ -1,1 +1,0 @@
-INSERT INTO user (id, address,country,age,email,name,last,pseudo,pwd,gender) values (1,'1 rue de Paris 75000 Paris','France',18,'test@test.com','Blanc','Juste','user1','pwduser','M');

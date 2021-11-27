@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StopWatch;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.supralog.user.commons.UserNotFoundException;
@@ -42,7 +41,6 @@ public class DisplayUser {
 	 * @return User found or UserNotFoundException
 	 */
 	@GetMapping("/user/{pseudo}")
-	@ResponseBody
 	public User showUser(@PathVariable String pseudo) {
 		User requestUser;
 		logger.info("Entrance of showUser for user : {}", pseudo);

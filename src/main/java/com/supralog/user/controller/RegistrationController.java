@@ -43,11 +43,12 @@ public class RegistrationController {
 	 * PostMapping method to create new user. 
 	 * PostMapping = "/newUser"
 	 * 
-	 * Excption will throw when:
+	 * Exception will throw when:
+	 * <ul>
 	 * <li> Pseudo already exist </li>
 	 * <li> Age under 18 </li>
 	 * <li> Country isn't France </li>
-	 * 
+	 * </ul>
 	 * @param pseudo mandatory, if already exist throw a bad request
 	 * @param pwd mandatory
 	 * @param email mandatory
