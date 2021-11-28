@@ -1,6 +1,7 @@
-package com.supralog.user.controller;
+package com.supralog.user.interfaces;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.Assert.assertTrue;
 
 import java.util.Optional;
 
@@ -12,17 +13,14 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import com.supralog.user.dto.User;
-import com.supralog.user.interfaces.UserRepository;
-
 @RunWith(SpringRunner.class)
 @DataJpaTest
-public class DisplayUserTest {
-
+public class UserReposirotyTest {
 	@Autowired TestEntityManager entityManager;
 	@Autowired UserRepository userRepository;
 	
 	@Test
-	public void whenFindByPsuedo_thenReturnUser() {
+	public void userRepositoryTest_whenFindByPseudo_thenReturnUser() {
 		
 		//create persist user for test
 		User userTest = new User();
@@ -40,6 +38,11 @@ public class DisplayUserTest {
 		assertThat(userFound.get().getPseudo())
 	      .isEqualTo(userTest.getPseudo());
 		
+	}
+	
+	@Test
+	public void userRepositoryTest_whenDontFindByPseudo_thenReturnEmpty() {
+		assertTrue(userRepository.findByPseudo("test").isEmpty());	
 	}
 
 }

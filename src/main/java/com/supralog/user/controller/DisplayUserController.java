@@ -22,14 +22,14 @@ import com.supralog.user.interfaces.UserRepository;
  *
  */
 @RestController
-public class DisplayUser {
+public class DisplayUserController {
 	@Autowired
 	private final UserRepository repository;
 
-	Logger logger = LoggerFactory.getLogger(DisplayUser.class);
+	Logger logger = LoggerFactory.getLogger(DisplayUserController.class);
 	StopWatch watch = new StopWatch();
 
-	DisplayUser(UserRepository repository) {
+	DisplayUserController(UserRepository repository) {
 		this.repository = repository;
 	}
 	/**

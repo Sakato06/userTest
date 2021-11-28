@@ -2,10 +2,14 @@ package com.supralog.user;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.ActiveProfiles;
 
+/**
+ * <b>Test unit.</b>
+ * 
+ * @author F.Anelli
+ *
+ */
 @SpringBootTest
-@ActiveProfiles("test")
 class UserTestApplicationTests {
 
 	@Test

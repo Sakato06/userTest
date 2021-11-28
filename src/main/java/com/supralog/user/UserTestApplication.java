@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
 /**
  * 
- * <b>Use case for test.</b>
+ * <b>Use case for create User.</b>
  * <p>
  *  Develop with SpringBoot.
  *  
