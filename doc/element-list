@@ -1,6 +1,6 @@
-com.supralog.user
-com.supralog.user.commons
-com.supralog.user.controller
-com.supralog.user.dto
-com.supralog.user.interfaces
-com.supralog.user.userTest
+com.example.user
+com.example.user.commons
+com.example.user.controller
+com.example.user.dto
+com.example.user.interfaces
+com.example.user.userTest
